@@ -3,6 +3,7 @@ This is a student project code  to demonstrate setting building up a llm based c
 Step 1: At first we need to create an environment variable. We will install all the packages which are needed to run this project in this envrionment.to create the environment we open a new terminal and write command 
 "conda create -p venv python==3.17
 As a we will see that venv folder is created. In this venv folder only we will install all the packages
+
  Step 2 : Download ollama3.1 from ollama.com and install it. It helps to work with ollama3.1 online
 After installation it can be run offline 
 by writing the command
@@ -20,6 +21,7 @@ That key needs to be used
 Step 4:Now we create a new python file.In my case I created ollama.py. In that I defined the following two environment variables
 #LANGCHAIN_API_KEY="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"
 #LANGCHAIN_PROJECT="PROJECTCHATBOT"
+
 Step 5 : Now we will install requirement.txt.To do this we will first create a txt file with name"requirenment.tx".In it we will write the following
 langchain_openai 
 langchain_core
@@ -31,7 +33,9 @@ langserve
 	"pip install -r requirenment.txt"
  and we will do this installation
 Step 6 we will copy the same environment variables in .env file and in another python file named app.py
+
 Step 7 :Get you own api key from langsmith and use it your ptyhon files(#LANGCHAIN_API_KEY) in ollama.py
+
 Step 8 :we will now important libraries in the ollama.py file
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -40,12 +44,15 @@ from langchain_community.llms import Ollama
 import streamlit as st
 import os
 from dotenv import load_dotenv
+
 Step 9: we then load I ollama.py
 load_dotenv() 
 to load environment variables
+
 Step 10 : Now we call environment variables in the ollama.py file
 os.environ["LANGCHAIN_TRACING_V2"]="true" // to start the tracing
 os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
+
 Step 11 Now we will create the chat by following the steps.
 first we will create a prompt. This prompt tells us how our chat bot will behave
 we wll make two tuple
