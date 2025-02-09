@@ -1,5 +1,6 @@
 # llm-based-chatbot-using-ollama-3.1
 This is a student project code  to demonstrate setting building up a llm based chat bot using ollama 3.1
+
 Step 1: At first we need to create an environment variable. We will install all the packages which are needed to run this project in this envrionment.to create the environment we open a new terminal and write command 
 "conda create -p venv python==3.17
 As a we will see that venv folder is created. In this venv folder only we will install all the packages
